@@ -18,7 +18,7 @@ Build container:
 $ docker run -p 8787:8787 -e PASSWORD=123 klgeyer/mutsig
 
 Copy directory if building container:
-$ docker run -p 8787:8787 -e PASSWORD=123 -d -P --name doit -v /Users/kellygeyer/Documents/gitlab/topic-models/code:/code klgeyer/mutsig
+$ docker run -p 8787:8787 -e PASSWORD=123 -d -P --name doit -v /Users/kellygeyer/Documents/mm-nmf:/code klgeyer/docker-rvi-stan
 
 ## Contents
 1. Dockerfile 

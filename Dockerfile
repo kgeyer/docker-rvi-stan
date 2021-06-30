@@ -23,8 +23,19 @@ RUN /rocker_scripts/install_pandoc.sh
 
 EXPOSE 8787
 
+# Install zlib
+wget https://zlib.net/zlib-1.2.11.tar.gz
+tar -xvzf zlib-1.2.11.tar.gz
+cd zlib-1.2.11
+./configure --prefix=/usr/local/zlib
+make install
+
+# Install BiocManager
+RUN R -e "install.packages('BiocManager')"
+
 # Install additional R packages
-RUN R -e "install.packages('remotes', repos = c(CRAN = 'https://cloud.r-project.org'))"
+RUN R -e "install.packages(c('stringr','remotes','foreach','doParallel'), repos = c(CRAN = 'https://cloud.r-project.org'))"
+RUN R -e "BiocManager::install('rhdf5', configure.args = c(Rhdf5lib = '--with-zlib=/usr/local/zlib'))"
 
 # Install cmdstanr
 RUN R -e "remotes::install_github('stephensrmmartin/cmdstanr', ref='158bedad4ad5cbc1dba2623bf02fe4bab5028101')"
