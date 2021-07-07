@@ -12,13 +12,13 @@ cmdstanr - https://github.com/stephensrmmartin/cmdstanr/tree/feature/rvi.
 Be sure to increase docker memory to at least 5GB!
 
 Run image:
-$ docker build -t klgeyer/mutsig .
+$ docker build -t klgeyer/docker-rvi-stan .
 
 Build container:
 $ docker run -p 8787:8787 -e PASSWORD=123 klgeyer/mutsig
 
 Copy directory if building container:
-$ docker run -p 8787:8787 -e PASSWORD=123 -d -P --name doit -v /Users/kellygeyer/Documents/mm-nmf:/code klgeyer/docker-rvi-stan
+$ docker run -p 8787:8787 -e PASSWORD=123 -d -P --name doit -v /Users/kellygeyer/Documents/github/stan-rvi-models:/code klgeyer/docker-rvi-stan
 
 ## Contents
 1. Dockerfile 

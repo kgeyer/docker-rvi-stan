@@ -49,10 +49,7 @@ apt-get update \
     make \
     unzip \
     zip \
-    zlib \
-    zlib1g \
-    sudo \
-    zlib1g-dev 
+    zlib1g 
 
 echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 locale-gen en_US.utf8
