@@ -36,7 +36,7 @@ RUN R -e "install.packages('BiocManager')"
 # Install additional R packages
 RUN R -e "install.packages(c('stringr','remotes','foreach','doParallel', 'MCMCpack', 'ggpubr', 'ggmcmc', 'bayesplot', 'ggplotify', 'reshape', 'gtools'), repos = c(CRAN = 'https://cloud.r-project.org'))"
 # RUN R -e "BiocManager::install('rhdf5', configure.args = c(Rhdf5lib = '--with-zlib=/usr/local/zlib'))"
-RUN R -e "BiocManager::install('rhdf5')"
+# RUN R -e "BiocManager::install('rhdf5')"
 
 # Install cmdstanr
 RUN R -e "remotes::install_github('stephensrmmartin/cmdstanr', ref='158bedad4ad5cbc1dba2623bf02fe4bab5028101')"

@@ -23,7 +23,8 @@ $ docker run -p 8787:8787 -e PASSWORD=123 -d -P --name doit -v /Users/kellygeyer
 ## Contents
 1. Dockerfile 
 2. scripts - Directory of supporting bash scripts
-3. old-stuff - Diretory of depreciated code
+3. Rscripts - Direcotry of R scripts
+4. old-stuff - Diretory of depreciated code
 
 ## References
 1. https://blog.cloud66.com/how-to-get-code-into-a-docker-container/
