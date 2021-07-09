@@ -15,7 +15,7 @@ Run image:
 $ docker build -t klgeyer/docker-rvi-stan .
 
 Build container:
-$ docker run -p 8787:8787 -e PASSWORD=123 klgeyer/mutsig
+$ docker run -p 8787:8787 -e PASSWORD=123 klgeyer/docker-rvi-stan
 
 Copy directory if building container:
 $ docker run -p 8787:8787 -e PASSWORD=123 -d -P --name doit -v /Users/kellygeyer/Documents/github/stan-rvi-models:/code klgeyer/docker-rvi-stan
